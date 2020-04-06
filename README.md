@@ -7,3 +7,4 @@ Data, Algorithms and Strategies in Machine Learning.
 ## Other resources
 - [Markdown Cheat Sheet](https://paperhive.org/help/markdown#images)
 - [Free Online Latex Equation Editor](http://www.sciweavers.org/free-online-latex-equation-editor)
+- [Markdown数学公式语法](https://www.jianshu.com/p/e74eb43960a1)
