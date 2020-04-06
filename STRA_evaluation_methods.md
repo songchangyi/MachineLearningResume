@@ -4,7 +4,7 @@
 ## 基本理论
 为了对学习器的泛化误差进行评估并进而做出选择，我们需要一个测试集(testing set)来测试模型对新样本的判别能力。然后以测试误差(testing error)作为泛化误差的近似。**要点**：测试样本是从样本真实分布中独立同分布(Independent and identically distributed, IID)采样得到，并与训练集互斥。
 
-### 1.1 留出法(hold-out)
+### 1 留出法(hold-out)
 直接将数据集划分为两个互斥的集合。使用分层采样(stratified sampling)。
 
 - **Cons**
@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 ```
 
-### 1.2 交叉验证法(K-fold cross validation)
+### 2 交叉验证法(K-fold cross validation)
 将数据集划分为k个大小相似的互斥子集，尽可能保持数据分布的一致性。每次用k-1个子集训练，剩下的那个测试。最终返回这k个测试结果的均值。结果的稳定性和保真性在很大程度上取决于k的取值，最常用的k值为10。
 
 为了减小因样本划分不同而引入的差别，通常要重复p次k折交叉验证。则最终结果为p次k折的均值。常见的有10次10折CV。
@@ -84,7 +84,7 @@ for train_index, test_index in loo.split(X):
     y_train, y_test = y[train_index], y[test_index]
 ```
 
-### 1.3 自助法(bootstrapping)
+### 3 自助法(bootstrapping)
 以自助采样法(bootstrap sampling)为基础的有放回的随机采样。样本在m次采样中始终不被采到的概率为：
 <img src="https://render.githubusercontent.com/render/math?math=(1 - \frac {1}{m})^m">
 
@@ -115,7 +115,7 @@ train = data.sample(frac=1.0,replace=True)
 test = data.loc[data.index.difference(train.index)].copy()
 ```
 
-### 1.4 调参与最终模型
+### 4 调参与最终模型
 在模型评估和选择过程中，我们只使用了一部分数据用于训练。在确定学习算法和参数配置后，应使用整个数据集重新训练模型。
 为了区分实际使用中的测试数据，我们把评估时的测试数据称为验证集(validation set)。
 
