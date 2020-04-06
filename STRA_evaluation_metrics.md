@@ -47,7 +47,7 @@ confusion_matrix(y_true, y_pred)
 ```
 
 - **查准率P**：
-<img src="https://render.githubusercontent.com/render/math?math=P=TP/(TP+FP)">
+<img src="https://render.githubusercontent.com/render/math?math=P= \frac{TP}{TP\+FP}">
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html)
 ```
