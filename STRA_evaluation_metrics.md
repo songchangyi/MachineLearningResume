@@ -86,9 +86,9 @@ disp.ax_.set_title('2-class Precision-Recall curve: '
                    'AP={0:0.2f}'.format(average_precision))
 ```
 
-**特点**：
-- 如果分类器A的曲线可以包住分类器B，则A优于B
-- 如果A和B的曲线交叉，则需要在具体条件下比较。曲线下的面积也不太容易估算，此时我们可以看平衡点(Break Event Point, BEP)，即P=R时的取值。
+- **特点**：
+  - 如果分类器A的曲线可以包住分类器B，则A优于B
+  - 如果A和B的曲线交叉，则需要在具体条件下比较。曲线下的面积也不太容易估算，此时我们可以看平衡点(Break Event Point, BEP)，即P=R时的取值。
 但是更常用的还是F1度量。
 
 - **F1 score** = 2 * P * R/(P+R)
