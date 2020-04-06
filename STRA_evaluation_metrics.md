@@ -47,7 +47,7 @@ confusion_matrix(y_true, y_pred)
 ```
 
 - **查准率P**：
-<img src="https://render.githubusercontent.com/render/math?math=P= \frac{TP}{(TP+FP)}">
+<img src="https://render.githubusercontent.com/render/math?math=P=TP/(TP+FP)">
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html)
 ```
@@ -56,7 +56,7 @@ precision_score(y_true, y_pred)
 ```
 
 - **查全率R**：
-<img src="https://render.githubusercontent.com/render/math?math=R= \frac{TP}{TP+FN}">
+<img src="https://render.githubusercontent.com/render/math?math=R=TP/(TP+FN)">
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html)
 ```
@@ -94,7 +94,7 @@ disp.ax_.set_title('2-class Precision-Recall curve: '
 但是更常用的还是F1度量。
 
 - **F1 score**：
-<img src="https://render.githubusercontent.com/render/math?math=R= \frac{2*P*R}{P+R}">
+<img src="https://render.githubusercontent.com/render/math?math=F1=2*P*R/(P+R)">
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
 ```
