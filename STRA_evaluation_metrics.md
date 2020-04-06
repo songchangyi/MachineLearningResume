@@ -46,8 +46,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix(y_true, y_pred)
 ```
 
-- **查准率P**：
-<img src="https://render.githubusercontent.com/render/math?math=P= \frac{TP}{TP\+FP}">
+- **查准率P** = TP/(TP+FP)
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html)
 ```
@@ -55,8 +54,7 @@ from sklearn.metrics import precision_score
 precision_score(y_true, y_pred)
 ```
 
-- **查全率R**：
-<img src="https://render.githubusercontent.com/render/math?math=R=TP/(TP+FN)">
+- **查全率R** = TP/(TP+FN)
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html)
 ```
@@ -93,8 +91,7 @@ disp.ax_.set_title('2-class Precision-Recall curve: '
 - 如果A和B的曲线交叉，则需要在具体条件下比较。曲线下的面积也不太容易估算，此时我们可以看平衡点(Break Event Point, BEP)，即P=R时的取值。
 但是更常用的还是F1度量。
 
-- **F1 score**：
-<img src="https://render.githubusercontent.com/render/math?math=F1=2*P*R/(P+R)">
+- **F1 score** = 2 * P * R/(P+R)
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
 ```
