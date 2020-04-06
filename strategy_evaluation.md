@@ -13,7 +13,7 @@
 >
 > 测试集较小，降低了保真性(fidelity)。解决方法：无完美解决方案，常见做法是将2/3-4/5的样本用于训练，剩下用于测试。
 
-**Code**[2](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
+- **Code**[Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 ```
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
@@ -23,6 +23,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 将数据集划分为k个大小相似的互斥子集，尽可能保持数据分布的一致性。每次用k-1个子集训练，剩下的那个测试。最终返回这k个测试结果的均值。结果的稳定性和保真性在很大程度上取决于k的取值，最常用的k值为10。
 
 为了减小因样本划分不同而引入的差别，通常要重复p次k折交叉验证。则最终结果为p次k折的均值。常见的有10次10折CV。
+
+- **Code**[Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)
+```
+from sklearn.model_selection import KFold
+kf = KFold(n_splits=10)
+for train_index, test_index in kf.split(X):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+```
 
 **留一法(Leave One Out, LOO)**
 特别的，如有m个样本，令k=m，此时为留一法。
@@ -36,6 +45,18 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 > 数据量大时开销难以忍受
 >
 > 未必永远比其他方法精确。“没有免费的午餐”
+
+**Code**[Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html)
+```
+from sklearn.model_selection import LeaveOneOut
+loo = LeaveOneOut()
+for train_index, test_index in loo.split(X):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+```
+
+#### 1.3 自助法(bootstrapping)
+
 
 ## 面试问题
 
