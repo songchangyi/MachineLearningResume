@@ -47,7 +47,7 @@ confusion_matrix(y_true, y_pred)
 ```
 
 - **查准率P**：
-<img src="https://render.githubusercontent.com/render/math?math=P= \frac{TP}{TP + FP}">
+<img src="https://render.githubusercontent.com/render/math?math=P= \frac{TP}{(TP+FP)}">
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html)
 ```
@@ -74,6 +74,7 @@ PR曲线可以直观的展示出查准率和查全率的关系。绘制步骤如
 3. 对于每个阈值，计算P和R
 
 大概会得到如下曲线：
+
 ![Image of PR curve](https://github.com/songchangyi/MachineLearningResume/blob/master/img/P_R.png)
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
