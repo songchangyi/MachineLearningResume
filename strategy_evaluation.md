@@ -8,11 +8,12 @@
 #### 1.1 留出法(hold-out)
 直接将数据集划分为两个互斥的集合。使用分层采样(stratified sampling)。
 
-**Cons**
-- 单次估计结果不够稳定可靠。解决方法：若干次随机划分，取平均值。
-- 测试集较小，降低了保真性(fidelity)。解决方法：无完美解决方案，常见做法是将2/3-4/5的样本用于训练，剩下用于测试。
+- **Cons**
+> 单次估计结果不够稳定可靠。解决方法：若干次随机划分，取平均值。
+>
+> 测试集较小，降低了保真性(fidelity)。解决方法：无完美解决方案，常见做法是将2/3-4/5的样本用于训练，剩下用于测试。
 
-**Code**[2]
+**Code**[2](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 ```
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
@@ -26,12 +27,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 **留一法(Leave One Out, LOO)**
 特别的，如有m个样本，令k=m，此时为留一法。
 
-**Pros**
-- 该方法不受划分方式的影响。
-- 与真实模型很相似，从而结果比较精确。
+- **Pros**
+> 该方法不受划分方式的影响。
+>
+> 与真实模型很相似，从而结果比较精确。
 
-**Cons**
+- **Cons**
 > 数据量大时开销难以忍受
+>
 > 未必永远比其他方法精确。“没有免费的午餐”
 
 ## 面试问题
@@ -39,5 +42,3 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 ## References
 1. 怎么理解 P 问题和 NP 问题 
 https://www.zhihu.com/question/27039635
-2. sklearn model_selection train_test_split
-https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
