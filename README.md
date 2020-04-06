@@ -1,2 +1,5 @@
-# MachineLearning
-Machine Learning Related Algorithms and Tricks
+# Machine Learning Resume
+
+Author : CSONG
+
+Data, Algorithms and Strategies in Machine Learning.
