@@ -58,7 +58,7 @@ for train_index, test_index in loo.split(X):
 #### 1.3 自助法(bootstrapping)
 以自助采样法(bootstrap sampling)为基础的有放回的随机采样。样本在m次采样中始终不被采到的概率为：(1-1/m)^m
 
-取极限：$\lim_{m \to \infty}{(1-1/m)^m}$ = 0.368
+取极限：$\lim_{m \to \infty}{(1- \frac {1}{m})^m}$
 
 ## 面试问题
 
