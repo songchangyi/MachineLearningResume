@@ -13,7 +13,7 @@
 >
 > 测试集较小，降低了保真性(fidelity)。解决方法：无完美解决方案，常见做法是将2/3-4/5的样本用于训练，剩下用于测试。
 
-- **Code**[Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
+- **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 ```
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
@@ -24,7 +24,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 为了减小因样本划分不同而引入的差别，通常要重复p次k折交叉验证。则最终结果为p次k折的均值。常见的有10次10折CV。
 
-- **Code**[Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)
+- **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)
 ```
 from sklearn.model_selection import KFold
 kf = KFold(n_splits=10)
@@ -46,7 +46,7 @@ for train_index, test_index in kf.split(X):
 >
 > 未必永远比其他方法精确。“没有免费的午餐”
 
-**Code**[Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html)
+**Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html)
 ```
 from sklearn.model_selection import LeaveOneOut
 loo = LeaveOneOut()
@@ -56,7 +56,9 @@ for train_index, test_index in loo.split(X):
 ```
 
 #### 1.3 自助法(bootstrapping)
+以自助采样法(bootstrap sampling)为基础的有放回的随机采样。样本在m次采样中始终不被采到的概率为：(1-1/m)^m
 
+取极限：$\lim^{m \to \infty}{(1-1/m)^m}$ = 0.368
 
 ## 面试问题
 
