@@ -1,4 +1,5 @@
 # Evaluation Methods
+以下内容基于周志华老师的机器学习2.2节归纳整理。
 
 ## 基本理论
 为了对学习器的泛化误差进行评估并进而做出选择，我们需要一个测试集(testing set)来测试模型对新样本的判别能力。然后以测试误差(testing error)作为泛化误差的近似。**要点**：测试样本是从样本真实分布中独立同分布(Independent and identically distributed, IID)采样得到，并与训练集互斥。
