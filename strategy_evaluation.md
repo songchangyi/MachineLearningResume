@@ -50,6 +50,7 @@ y_pred = cross_val_predict(lasso, X, y, cv=3)
 ```
 
 如果我们希望返回CV的模型，可以使用：
+
 3. **cross_validate** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_validate.html)
 ```
 from sklearn import datasets, linear_model
