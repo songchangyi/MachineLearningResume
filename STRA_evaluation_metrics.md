@@ -133,7 +133,7 @@ AUC可以通过ROC下各部分的面积求和而得，估算为：
 
 <img src="https://bit.ly/2JPv9mY" align="center" border="0" alt="AUC=\frac{1}{2}  \sum_{i=1}^{m-1} (x_{i+1}-x_i) \cdot (y_i+y_{i+1})" width="285" height="53" />
 
-![Image]http://www.sciweavers.org/tex2img.php?eq=AUC%3D%5Cfrac%7B1%7D%7B2%7D%20%20%5Csum_%7Bi%3D1%7D%5E%7Bm-1%7D%20%28x_%7Bi%2B1%7D-x_i%29%20%5Ccdot%20%28y_i%2By_%7Bi%2B1%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0
+![Image](http://www.sciweavers.org/tex2img.php?eq=AUC%3D%5Cfrac%7B1%7D%7B2%7D%20%20%5Csum_%7Bi%3D1%7D%5E%7Bm-1%7D%20%28x_%7Bi%2B1%7D-x_i%29%20%5Ccdot%20%28y_i%2By_%7Bi%2B1%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.auc.html)
 ```
