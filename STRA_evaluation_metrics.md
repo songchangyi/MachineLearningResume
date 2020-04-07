@@ -1,4 +1,4 @@
-# Evaluation Metrics
+# 模型评估指标 (Evaluation Metrics)
 以下内容基于周志华老师的机器学习2.3节归纳整理。
 
 ## 基本理论
@@ -103,3 +103,27 @@ f1_score(y_true, y_pred)
 前者是对多组P和R直接取平均值，后者则是先计算TP，FP等的平均值再重新计算F1。
 
 ### 3 ROC与AUC
+ROC全称是受试者工作特征(Receiver Operating Characteristic)曲线。与PR曲线类似，根据预测结果对测试样例进行排序，每次计算出2个重要量的值作为横纵坐标。
+与PR曲线不同的是，ROC曲线的纵轴使用真正例率(True Positive Rate)，横轴使用假正例率(False Positive Rate)：
+
+![Image of PR curve](https://github.com/songchangyi/MachineLearningResume/blob/master/img/ROC.png)
+
+- **Code** [Sklearn](https://scikit-learn.org/stable/auto_examples/plot_roc_curve_visualization_api.html)
+```
+from sklearn.svm import SVC
+from sklearn.metrics import plot_roc_curve
+svc = SVC(random_state=42)
+svc.fit(X_train, y_train)
+svc_disp = plot_roc_curve(svc, X_test, y_test)
+plt.show()
+```
+
+- **TPR** = TP/(TP+FN)
+- **FPR** = FP/(TN+FP)
+
+- **特点**：
+  - 如果分类器A的曲线可以包住分类器B，则A优于B
+  - 如果A和B的曲线交叉，则需要比较曲线下的面积AUC(Area Under ROC Curve)
+
+AUC可以通过ROC下各部分的面积求和而得：
+<img src="https://render.githubusercontent.com/render/math?math=AUC=\frac{1}{2}  \sum_{i=1}^{m-1} (x_{i+1}-x_i) \cdot (y_i+y_{i+1})">
