@@ -49,4 +49,4 @@
 
 从下图可以看出，它完美的符合我们的预期：
 
-![Image of sigmoid](https://github.com/songchangyi/MachineLearningResume/blob/master/img/sigmoid.png)
+![Image of sigmoid](https://github.com/songchangyi/MachineLearningResume/blob/master/img/sigmoid.PNG)
