@@ -1,7 +1,7 @@
 # 模型评估指标 (Evaluation Metrics)
-以下内容基于周志华老师的机器学习2.3节归纳整理。
+以下内容基于周志华老师的机器学习2.3节，2.5节归纳整理。
 
-## 基本理论
+## 基本理论I：性能度量
 为了对学习器的泛化性能进行评估，除了有效可行的实验估计方法，还需要有衡量模型泛化能力的评价标准，即性能度量(performance mesure)。
 不同的性能度量往往会导致不同的评判结果，所以模型的好坏的相对的。应该根据算法，数据和任务需求来综合选择。
 
@@ -139,3 +139,10 @@ from sklearn import metrics
 fpr, tpr, thresholds = metrics.roc_curve(y, pred, pos_label=2)
 metrics.auc(fpr, tpr)
 ```
+
+## 基本理论II：偏差与方差 (bias & variance)
+除了通过实验估计其泛化性能，人们往往还希望了解其原因。偏差-方差分解(bias-variance decomposition)是解释算法泛化性能的一种重要工具。
+即将泛化误差分解为偏差、方差和噪声之和：
+
+![E=bias^2(x)+var(x)+\varepsilon^2](https://render.githubusercontent.com/render/math?math=E%3Dbias%5E2(x)%2Bvar(x)%2B%5Cvarepsilon%5E2)
+
