@@ -146,3 +146,22 @@ metrics.auc(fpr, tpr)
 
 ![E=bias^2(x)+var(x)+\varepsilon^2](https://render.githubusercontent.com/render/math?math=E%3Dbias%5E2(x)%2Bvar(x)%2B%5Cvarepsilon%5E2)
 
+这里需要回顾一下偏差、方差和噪声的含义：
+- 偏差：度量算法的期望预测与真实结果的偏离程度，即算法本身的拟合能力
+- 方差：度量了同样大小的训练集变动所导致的学习性能的变化，即数据扰动所造成的影响
+- 噪声：在当前任务上任何算法所能达到的期望泛化误差下界，即学习问题本身的难度
+
+正如P与R，偏差和方差是有冲突的。学习器一开始训练不足的时候，拟合能力不够，数据扰动不会影响太大，则偏差主导泛化错误率。随着训练加深，数据扰动产生的影响越来越大，方差开始主导错误率。当模型拟合能力非常强的时候，就过拟合了。
+
+> 总结一下:学习能力不行造成的误差是偏差，学习能力太强造成的误差是方差。[1]
+
+## 面试问题
+- 讲一下模型的评估指标 what are the evaluation metrics
+- 讲一下混淆矩阵 what is a confusion matrix
+- 查准率和查全率的定义及取舍 precision / recall definition and tradeoff
+- 如何计算并解释ROC曲线和PR曲线中的AUC how to calculate and interpret AUC of ROC / PR curve
+- 讲一下偏差与方差 Bias vs variance
+
+## References
+1. [偏差和方差有什么区别](https://www.zhihu.com/question/20448464)
+2. [偏差（Bias）与方差（Variance）](https://zhuanlan.zhihu.com/p/38853908)
