@@ -108,6 +108,13 @@ ROC全称是受试者工作特征(Receiver Operating Characteristic)曲线。与
 
 ![Image of ROC curve](https://github.com/songchangyi/MachineLearningResume/blob/master/img/ROC.png)
 
+- **TPR** = TP/(TP+FN)，即正确预测的正例占所有正例的比例。
+- **FPR** = FP/(TN+FP)，即错误预测的正例占所有负例的比例。
+
+举个例子，我们一开始设置阈值为1。就是说凡是预测分值小于1的结果我们都判定为负例。此时没有正例，自然TP和FP均为0。随着阈值的下降，我们开始预测出正例，当然其中有一部分是真正的正例，另外一部分其实是负例被错误预测了，所以TPR和FPR都开始增长。**注意**，分母分别是所有的正例和负例，也就是说分母是不会变的。这样一直到最后，我们设置阈值为0，判断所有样本均为正。这时候我们找出了所有真正的正样本，同时也把在负样本上犯的错误达到最大化。
+
+形象的来讲，好的分类器的ROC曲线会接近于覆盖整个图。意味着从原点开始，当FPR每增加一点，TPR就会获得极大的增长。即降低阈值后预测的绝大部分正例都是真正的正例。
+
 - **Code** [Sklearn](https://scikit-learn.org/stable/auto_examples/plot_roc_curve_visualization_api.html)
 ```
 from sklearn.svm import SVC
@@ -117,9 +124,6 @@ svc.fit(X_train, y_train)
 svc_disp = plot_roc_curve(svc, X_test, y_test)
 plt.show()
 ```
-
-- **TPR** = TP/(TP+FN)
-- **FPR** = FP/(TN+FP)
 
 - **特点**：
   - 如果分类器A的曲线可以包住分类器B，则A优于B
