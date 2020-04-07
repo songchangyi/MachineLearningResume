@@ -126,4 +126,4 @@ plt.show()
   - 如果A和B的曲线交叉，则需要比较曲线下的面积AUC(Area Under ROC Curve)
 
 AUC可以通过ROC下各部分的面积求和而得：
-<img src="https://render.githubusercontent.com/render/math?math=AUC=\frac{1}{2}  \sum_{i=1}^{m-1} (x_{i+1}-x_i) \cdot (y_i+y_{i+1})">
+<img src="https://bit.ly/2JPv9mY" align="center" border="0" alt="AUC=\frac{1}{2}  \sum_{i=1}^{m-1} (x_{i+1}-x_i) \cdot (y_i+y_{i+1})" width="285" height="53" />
