@@ -122,7 +122,5 @@ test = data.loc[data.index.difference(train.index)].copy()
 ## 面试问题
 
 ## References
-1. 怎么理解 P 问题和 NP 问题 
-https://www.zhihu.com/question/27039635
-2. 机器学习理论与Scikit-Learn对应操作
-https://zhuanlan.zhihu.com/p/37787407
+1. [怎么理解 P 问题和 NP 问题](https://www.zhihu.com/question/27039635)
+2. [机器学习理论与Scikit-Learn对应操作](https://zhuanlan.zhihu.com/p/37787407)
