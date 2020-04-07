@@ -106,7 +106,7 @@ f1_score(y_true, y_pred)
 ROC全称是受试者工作特征(Receiver Operating Characteristic)曲线。与PR曲线类似，根据预测结果对测试样例进行排序，每次计算出2个重要量的值作为横纵坐标。
 与PR曲线不同的是，ROC曲线的纵轴使用真正例率(True Positive Rate)，横轴使用假正例率(False Positive Rate)：
 
-![Image of PR curve](https://github.com/songchangyi/MachineLearningResume/blob/master/img/ROC.png)
+![Image of ROC curve](https://github.com/songchangyi/MachineLearningResume/blob/master/img/ROC.png)
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/auto_examples/plot_roc_curve_visualization_api.html)
 ```
