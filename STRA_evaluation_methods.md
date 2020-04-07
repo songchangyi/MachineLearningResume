@@ -1,4 +1,4 @@
-# Evaluation Methods
+# 模型评估方法 (Evaluation Methods)
 以下内容基于周志华老师的机器学习2.2节归纳整理。
 
 ## 基本理论
