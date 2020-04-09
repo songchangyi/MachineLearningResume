@@ -70,4 +70,11 @@
 
 更多关于CART树的细节请参考：[决策树算法原理(下)](https://www.cnblogs.com/pinard/p/6053344.html)
 
+- **Code** [Sklearn](https://scikit-learn.org/stable/modules/tree.html#tree)
+```
+from sklearn.tree import DecisionTreeClassifier
+clf = DecisionTreeClassifier()
+clf = clf.fit(X, Y)
+```
+
 ## 3 剪枝处理
