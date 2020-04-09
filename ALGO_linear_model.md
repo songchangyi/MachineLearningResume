@@ -130,6 +130,21 @@ X_resampled, y_resampled = SMOTE().fit_resample(X, y)
 scale_pos_weight = count(negative examples)/count(Positive examples)
 ```
 
+## 面试问题
+- 解释线性回归 What’s linear regression
+- 为什么线性模型中需要假设残差服从正态分布 why linear model needs to assume the residual is normally distributed
+- 如何解释变量参数 How to explain coefficients
+- 变量的参数是无偏估计量吗 Are coefficients unbiased estimators
+- 如何进行特征选择 How to select features
+- 如何得到最优参数 How to get optimal parameters (gradient descent)
+- 如何处理共线性 How to handle collinearity? What’s the effect?
+- 当两个变量完全线性相关如何处理 What if two variables are perfectly correlated
+- 什么是正则化，有什么作用 What is regularization? What’s the impact of regularization?
+- 岭回归和Lasso回归的异同 Ridge vs Lasso?
+- 线性回归于逻辑回归的异同 Linear regression vs logistic regression
+- 逻辑回归的代价函数 Cost function of logistic regression
+- 讲述一下梯度下降法 Gradient Descent
+
 ## References
 - [机器学习--Logistic回归计算过程的推导](https://blog.csdn.net/ligang_csdn/article/details/53838743)
 - [逻辑回归（Logistic Regression）-牛顿法求解参数](https://blog.csdn.net/Fishmemory/article/details/51603836)
