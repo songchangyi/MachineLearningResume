@@ -83,6 +83,13 @@ y_pred = gnb.fit(X_train, y_train).predict(X_test)
 
 进一步理解戳[简书](https://www.jianshu.com/p/1121509ac1dc)
 
+## 面试问题
+1. 贝叶斯学派和频率学派的方法有什么区别 What are the differences between “Bayesian” and “Freqentist” approach for Machine Learning?
+2. 对比最大似然和最大后验估计 Compare and contrast maximum likelihood and maximum a posteriori estimation.
+3. 贝叶斯方法如何自动筛选特征 How does Bayesian methods do automatic feature selection?
+4. 贝叶斯正则化是什么意思 What do you mean by Bayesian regularization?
+5. 什么时候你会用贝叶斯方法而不是频率方法 When will you use Bayesian methods instead of Frequentist methods?
+
 ## References
 - [垃圾邮件是如何用贝叶斯方法过滤掉的](https://blog.csdn.net/saltriver/article/details/72571876)
 - [Naive Bayes * 垃圾邮件分类](http://www.iequa.com/2017/08/10/ml/naive-bayes-1/)
