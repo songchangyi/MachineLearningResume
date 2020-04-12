@@ -6,7 +6,7 @@
 
 样本空间中，划分超平面可通过如下方程描述：
 
-![ w^{T}+b=0](https://render.githubusercontent.com/render/math?math=%20w%5E%7BT%7D%2Bb%3D0)
+![w^{T}+b=0](https://render.githubusercontent.com/render/math?math=w%5E%7BT%7D%2Bb%3D0)
 
 其中w为法向量，b为位移项。那么空间中任意点x到该平面的距离为：
 
