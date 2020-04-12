@@ -60,6 +60,13 @@ SVR可表示为：
 
 ![f(x)=\sum_{i=1}^m (\widehat{\alpha}_i-\alpha_i) \kappa(x, x_i)+b ](https://render.githubusercontent.com/render/math?math=f(x)%3D%5Csum_%7Bi%3D1%7D%5Em%20(%5Cwidehat%7B%5Calpha%7D_i-%5Calpha_i)%20%5Ckappa(x%2C%20x_i)%2Bb%20)
 
+- **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html)
+```
+from sklearn.svm import SVR
+clf = SVC(C=1.0, epsilon=0.2)
+clf.fit(X, y)
+```
+
 ## 6 原理推导补充
 SVM涉及的数学推导很多，限于笔者水平以及篇幅，这里偷懒不予列出。
 但为感兴趣的小伙伴准备了一个近乎无敌的链接[CSDN](https://blog.csdn.net/v_july_v/article/details/7624837)
