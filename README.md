@@ -11,6 +11,7 @@ Data, Algorithms and Strategies in Machine Learning.
 - [决策树](https://github.com/songchangyi/MachineLearningResume/blob/master/ALGO_decision_tree.md)
 - [神经网络](https://github.com/songchangyi/MachineLearningResume/blob/master/ALGO_neural_network.md)
 - [支持向量机](https://github.com/songchangyi/MachineLearningResume/blob/master/ALGO_support_vector_machine.md)
+- [贝叶斯分类器](https://github.com/songchangyi/MachineLearningResume/blob/master/ALGO_bayes_classifier.md)
 
 ## Other resources
 - [Markdown Cheat Sheet](https://paperhive.org/help/markdown#images)
