@@ -64,3 +64,24 @@ clf.fit(X, y)
 ```
 
 ## 4 全局最小与局部极小
+神经网络在训练集上的误差E是关于连接权w和阈值theta的函数。那么训练的过程可以看作一个寻找最优参数的过程。即在参数空间中，寻找一组最优参数使得误差最小。
+
+这里的最优可以是局部极小(local minimum)和全局最小(global minimum)。
+简单来说，局部极小就是该点的邻域误差均不小于该点。全局最小就是参数空间中所有点的误差都不小于该点。
+可能存在多个局部极小，但是全局最小只有一个。
+
+梯度下降法就是每一步计算误差函数在当前点的梯度，然后沿着梯度下降最快的方向寻找最优解。当梯度等于0时，达到局部极小。显然，局部极小不一定是全局最小。
+所以我们试图跳出这个局部极小：
+
+- 以多组不同参数初始化多个网络，取其中误差最小者。背后的思想是从不同的初始点开始，陷入同一个局部极小的可能性较低。
+- 模拟退火。以一定概率接受比当前解更差的结果。有助于跳出局部极小，但也有可能跳出全局最小。
+- 随机梯度下降(Stochastic gradient descent, SGD)。每次使用单个样本或者小批量样本(mini-batch)，于是求得的梯度也就带有了随机性。
+
+- **Code** [Keras](https://keras.io/optimizers/)
+```
+from keras import optimizers
+sgd = optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss='mean_squared_error', optimizer=sgd)
+```
+
+## 面试问题
