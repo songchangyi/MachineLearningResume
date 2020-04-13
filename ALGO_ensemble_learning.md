@@ -173,3 +173,4 @@ reg = StackingRegressor(estimators=estimators, final_estimator=GradientBoostingR
 3. Boosting和Bagging的区别 boosting vs bagging
 
 ## References
+- [AdaBoost算法详述](https://zhuanlan.zhihu.com/p/42915999)
