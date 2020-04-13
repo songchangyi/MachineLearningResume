@@ -39,7 +39,7 @@ accuracy_score(y_true, y_pred)
 
 1. **混淆矩阵**
 
-![Image of cm](https://github.com/songchangyi/MachineLearningResume/blob/master/img/cm.png)
+![Image of cm](https://github.com/songchangyi/MachineLearningResume/blob/master/img/cm.PNG)
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
 ```
