@@ -15,6 +15,7 @@ Data, Algorithms and Strategies in Machine Learning.
 - [集成学习](https://github.com/songchangyi/MachineLearningResume/blob/master/ALGO_ensemble_learning.md)
 - [聚类](https://github.com/songchangyi/MachineLearningResume/blob/master/ALGO_clustering.md)
 - [降维](https://github.com/songchangyi/MachineLearningResume/blob/master/ALGO_dimensionality_reduction.md)
+- [特征选择](https://github.com/songchangyi/MachineLearningResume/blob/master/DATA_feature_selection.md)
 
 ## Other resources
 - [Markdown Cheat Sheet](https://paperhive.org/help/markdown#images)
