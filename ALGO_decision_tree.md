@@ -132,3 +132,6 @@ clf = clf.fit(X, Y)
 ## 面试问题
 - 如何处理过拟合问题 how to control overfitting?
 - 解释一下基尼系数 What is Gini index?
+
+## References
+- [决策树算法原理(下)](https://www.cnblogs.com/pinard/p/6053344.html)
