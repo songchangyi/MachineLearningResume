@@ -123,7 +123,7 @@ from imblearn.over_sampling import SMOTE
 X_resampled, y_resampled = SMOTE().fit_resample(X, y)
 ```
 
-3.阈值移动(threshold-moving)：
+3. 阈值移动(threshold-moving)：
 
 在决策过程中考虑到样本比例。例如xgboost算法的如下参数：
 ```
