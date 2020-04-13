@@ -39,10 +39,7 @@ accuracy_score(y_true, y_pred)
 
 1. **混淆矩阵**
 
-|  | 实际正例 | 实际反例 |
-| --- | --- | --- |
-| 预测为正 | 真正例(TP) | 假正例(FP) |
-| 预测为反 | 假反例(FN) | 真反例(TN) |
+![Image of cm](https://github.com/songchangyi/MachineLearningResume/blob/master/img/cm.png)
 
 - **Code** [Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
 ```
